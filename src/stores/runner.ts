@@ -40,8 +40,11 @@ export const useRunnerStore = defineStore({
     async initializeTests() {
       this.tests = await getInitialTests();
     },
-    addTest(input: { status: TestStatus; description: string; results: [] }) {
-      this.tests = [...this.tests, { ...input, id: this.nextTestId }];
+    addTest(description: string) {
+      this.tests = [
+        ...this.tests,
+        { description, id: this.nextTestId, status: "IDLE", results: [] },
+      ];
     },
     updateTest(input: Test) {
       this.tests = this.tests.map((test) =>

@@ -47,11 +47,7 @@ const getTests = computed(() => store.getTests);
 const description = ref("");
 
 function addTestHandler(): void {
-  store.addTest({
-    description: description.value,
-    results: [],
-    status: "IDLE",
-  });
+  store.addTest(description.value);
 
   description.value = "";
 }
