@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import type { Test } from "@/assets/tests";
+import type { Test } from "@/stores/tests";
 import Spinner from "./Spinner.vue";
 
 defineEmits(["initTests"]);

@@ -27,12 +27,12 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRunnerStore } from "@/stores/runner";
+import { useTestStore } from "@/stores/tests";
 import Header from "@/components/Header.vue";
 import TestList from "@/components/TestList.vue";
 import TestRunner from "@/components/TestRunner.vue";
 
-const store = useRunnerStore();
+const store = useTestStore();
 const testRunnerStatus = computed(() => store.testRunnerStatus);
 const getTests = computed(() => store.getTests);
 
@@ -43,7 +43,7 @@ async function initTests(): Promise<void> {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="pcss" scoped>
 .tester {
   width: 900px;
   min-height: 600px;

@@ -37,11 +37,11 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { useRunnerStore } from "@/stores/runner";
+import { useTestStore } from "@/stores/tests";
 import Header from "@/components/Header.vue";
 import TestList from "@/components/TestList.vue";
 
-const store = useRunnerStore();
+const store = useTestStore();
 const getTests = computed(() => store.getTests);
 
 const description = ref("");

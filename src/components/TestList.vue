@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Test } from "@/assets/tests";
+import type { Test } from "@/stores/tests";
 import Spinner from "./Spinner.vue";
 
 defineProps<{
