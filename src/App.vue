@@ -6,9 +6,9 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { useRunnerStore } from "./stores/runner";
+import { useTestStore } from "./stores/tests";
 import "@/assets/tailwind.css";
 
-const store = useRunnerStore();
+const store = useTestStore();
 onMounted(() => store.initializeTests());
 </script>
